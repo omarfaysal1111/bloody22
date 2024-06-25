@@ -56,10 +56,11 @@ class _NearestHospitalState extends State<NearestHospital> {
   }
 
   Future<void> getData() async {
-    var request = http.Request(
+    var request = http.MultipartRequest(
         'POST',
         Uri.parse(
-            'https://api-service.cloud/vien2vien/public_html/api/getdata?governorate=1'));
+            'https://api-service.cloud/vien2vien/public_html/api/getdata'));
+    request.fields.addAll({'city_id': '1'});
 
     http.StreamedResponse response = await request.send();
 

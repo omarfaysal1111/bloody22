@@ -1,6 +1,9 @@
 import 'package:bloody/core/utils/constants.dart';
 import 'package:bloody/core/utils/styles.dart';
 import 'package:bloody/features/home/presentation/nearest_hospital.dart';
+import 'package:bloody/features/home/presentation/views/donatation_page.dart';
+import 'package:bloody/features/home/presentation/views/register_donatation.dart';
+import 'package:bloody/features/home/presentation/widgets/instructions_list_view.dart';
 import 'package:bloody/features/register/presentation/views/update_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,9 +47,7 @@ class HomePageBody extends StatelessWidget {
           Image.asset('assets/vein.jpg'),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => NearestHospital(),
-              ));
+              Navigator.of(context).pushNamed(DonationPage.id);
             },
             child: Stack(alignment: Alignment.center, children: [
               Image.asset('assets/help.png'),

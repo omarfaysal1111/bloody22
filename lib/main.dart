@@ -1,8 +1,11 @@
 import 'package:bloody/features/donation/presentation/views/donation_history.dart';
+import 'package:bloody/features/home/presentation/views/donatation_page.dart';
+import 'package:bloody/features/home/presentation/views/dontation_page_sec.dart';
 import 'package:bloody/features/home/presentation/views/register_donatation.dart';
 import 'package:bloody/features/home/presentation/views/settings.dart';
 import 'package:bloody/features/donation/presentation/views/terms_and_conditions.dart';
 import 'package:bloody/features/home/presentation/views/home.dart';
+import 'package:bloody/features/home/presentation/widgets/donation_page_body.dart';
 import 'package:bloody/features/register/presentation/views/create_new_password.dart';
 import 'package:bloody/features/register/presentation/views/forget_password.dart';
 import 'package:bloody/features/register/presentation/views/login_page.dart';
@@ -35,6 +38,8 @@ class BloodApp extends StatelessWidget {
         VerifyByEmail.id: (context) => const VerifyByEmail(),
         LoginPage.id: (context) => const LoginPage(),
         ForgetPassword.id: (context) => const ForgetPassword(),
+        DonationPage.id: (context) => const DonationPage(),
+        DonationPageSec.id: (context) => const DonationPageSec(),
         CreateNewPassword.id: (context) => const CreateNewPassword(),
         DonationHistory.id: (context) => const DonationHistory(),
         Settings.id: (context) => const Settings(),
